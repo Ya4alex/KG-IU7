@@ -1,0 +1,42 @@
+dialog {
+  min-width: 10rem;
+  max-width: 50rem;
+  max-height: calc(100vh - 10rem);
+  min-height: 6rem;
+
+  margin: 0 auto;
+  margin-top: 3rem;
+
+  padding: 2rem;
+
+  border: 1px solid var(--st-color);
+  border-radius: 1rem;
+
+  background-color: var(--backround-color);
+
+  z-index: 100;
+  width: auto;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.27);
+}
+
+dialog::-webkit-scrollbar-thumb {
+  background-color: var(--elem-color);
+  border: 0.3rem solid transparent;
+  border-radius: 1rem;
+  background-clip: padding-box;  
+}
+
+dialog::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+dialog .dialog-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+}
