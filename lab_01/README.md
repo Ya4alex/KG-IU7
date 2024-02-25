@@ -9,7 +9,7 @@
 ![](task.jpeg)
 
 ## About:
-Собранное приложение лежит в [`laba_01/dist/`](dist/): [`laba_01/dist/index.html`](dist/index.html)
+Собранное приложение лежит в [`lab_01/dist/`](dist/): [`lab_01/dist/index.html`](dist/index.html)
 
 - Для запуска может потребоваться web сервер (из-за CORS policy): 
 ```bash
