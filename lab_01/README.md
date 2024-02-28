@@ -8,6 +8,7 @@
 
 ![](task.jpeg)
 
+
 ## About:
 Собранное приложение лежит в [`lab_01/dist/`](dist/): [`lab_01/dist/index.html`](dist/index.html)
 
