@@ -1,0 +1,43 @@
+name: Deploy lab_01 Website to GitHub Pages
+
+on:
+  push:
+    branches:
+      - develop
+    paths-ignore:
+      - "**.md"
+      - "**.spec.js"
+      - ".idea"
+      - ".vscode"
+      - ".dockerignore"
+      - "Dockerfile"
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: cd lab_01_* && npm install
+
+      - name: Build
+        run: cd lab_01_* && npm run build:onlyweb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: lab_01_*/dist
+          publish_branch: gh-pages
+          allow_empty_commit: true
+          destination_dir: lab_01

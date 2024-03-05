@@ -1,0 +1,43 @@
+{
+  "name": "lab_01_18",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Приложение предназначено для решения задачи №18, в которой на плоскости заданы два множества точек. Целью является нахождение пары окружностей, каждая из которых проходит хотя бы через 3 различные точки одного и того же множества (точки берутся из разных множеств для разных окружностей), для которых площадь четырехугольника, образованного центрами окружностей и точками касания общей касательной, максимальна.",
+  "author": "Yanochkin Alexander IU7-45B",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "build:onlyweb": "tsc && vite build",
+    "build:win": "tsc && vite build && electron-builder -w",
+    "build:mac": "tsc && vite build && electron-builder -m",
+    "build:lnx": "tsc && vite build && electron-builder -l",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-konva": "^18.2.10",
+    "react-responsive": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.7",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "electron": "^26.1.0",
+    "electron-builder": "^24.6.4",
+    "eslint": "^8.48.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-electron": "^0.14.0",
+    "vite-plugin-electron-renderer": "^0.14.5"
+  },
+  "main": "dist-electron/main.js"
+}

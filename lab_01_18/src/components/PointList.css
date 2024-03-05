@@ -1,0 +1,26 @@
+.point-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  gap: 2px;
+}
+
+.point-list-item {
+  display: flex;
+  min-height: 30px;
+  gap: 2px;
+}
+
+.point-list-input-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+
+/* .point-list-btn-dlt-red {
+  background-color: rgba(226, 43, 43, 0.308);
+}
+.point-list-btn-dlt-blue {
+  background-color: rgba(43, 46, 226, 0.308);
+} */

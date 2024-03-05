@@ -1,0 +1,22 @@
+.trah-box-svg {
+  height: 100%;
+}
+
+.trah-box-svg line {
+  stroke: var(--st-color);
+  stroke-width: 18;
+}
+
+.trah-box-svg path {
+  stroke: var(--st-color);
+  stroke-width: 18;
+}
+
+.file-svg {
+  height: 100%;
+}
+
+.file-svg path {
+  stroke: var(--st-color);
+  stroke-width: 18;
+}
