@@ -1,2 +1,5 @@
 .idea
 */node_modules
+lab_*/externals
+lab_*/cpp/build
+lab_*/dist*
