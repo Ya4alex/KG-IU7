@@ -30,21 +30,21 @@ function findTangentPoints(
   c1: { x: number; y: number; r: number },
   c2: { x: number; y: number; r: number }
 ): [{ x: number; y: number }, { x: number; y: number }] {
-  var dx = c1.x - c2.x;
-  var dy = c1.y - c2.y;
+  const dx = c1.x - c2.x;
+  const dy = c1.y - c2.y;
 
-  var distance = Math.sqrt(dx * dx + dy * dy);
+  const distance = Math.sqrt(dx * dx + dy * dy);
 
-  var angle = Math.atan2(dy, dx);
-  var theta = Math.acos((c2.r - c1.r) / distance);
-  var cosTangentAngle1 = Math.cos(angle + theta);
-  var sinTangentAngle1 = Math.sin(angle + theta);
+  const angle = Math.atan2(dy, dx);
+  const theta = Math.acos((c2.r - c1.r) / distance);
+  const cosTangentAngle1 = Math.cos(angle + theta);
+  const sinTangentAngle1 = Math.sin(angle + theta);
 
-  var tangentPoint1 = {
+  const tangentPoint1 = {
     x: c1.x + c1.r * cosTangentAngle1,
     y: c1.y + c1.r * sinTangentAngle1,
   };
-  var tangentPoint3 = {
+  const tangentPoint3 = {
     x: c2.x + c2.r * cosTangentAngle1,
     y: c2.y + c2.r * sinTangentAngle1,
   };
@@ -74,9 +74,16 @@ function* generateCirclesFromTriplets(
   }
 }
 
-function findMaxAreaForPointSets(points1: { x: number; y: number }[], points2: { x: number; y: number }[]): [{ x: number; y: number; r: number }[] | null, number] {
-  const circles1: { x: number; y: number; r: number }[] = Array.from(generateCirclesFromTriplets(points1));
-  const circles2: { x: number; y: number; r: number }[] = Array.from(generateCirclesFromTriplets(points2));
+function findMaxAreaForPointSets(
+  points1: { x: number; y: number }[],
+  points2: { x: number; y: number }[]
+): [{ x: number; y: number; r: number }[] | null, number] {
+  const circles1: { x: number; y: number; r: number }[] = Array.from(
+    generateCirclesFromTriplets(points1)
+  );
+  const circles2: { x: number; y: number; r: number }[] = Array.from(
+    generateCirclesFromTriplets(points2)
+  );
   let maxArea = -Infinity;
   let maxCirclePair = null;
   for (let i = 0; i < circles1.length; i++) {
@@ -89,11 +96,6 @@ function findMaxAreaForPointSets(points1: { x: number; y: number }[], points2: {
     }
   }
   return [maxCirclePair, maxArea];
-}
-
-function getShape(c1: { x: number; y: number; r: number }, c2: { x: number; y: number; r: number }): [number, number, number, number, number, number, number, number] {
-  const [p1, p2] = findTangentPoints(c1, c2);
-  return [c1.x, c1.y, p1.x, p1.y, p2.x, p2.y, c2.x, c2.y];
 }
 
 self.onmessage = function (event) {

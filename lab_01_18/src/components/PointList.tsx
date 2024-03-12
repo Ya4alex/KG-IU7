@@ -1,6 +1,6 @@
 import { ChangeEvent, FC } from "react";
 import "./PointList.css";
-import { TrashSVG } from "./svg/SVG.jsx";
+import { TrashSVG } from "./svg/SVG.tsx";
 import { MyPoint } from "../math/PointObj.js";
 import { PointsHookResult } from "../hooks/usePoint.js";
 

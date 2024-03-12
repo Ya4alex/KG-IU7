@@ -24,7 +24,7 @@ const Modal: FC<ModalProps> = ({ open, children }) => {
     <dialog ref={dialog}>
       <div className="dialog-inner">{children}</div>
     </dialog>,
-    document.getElementById('modal') as any
+    document.getElementById('modal') as HTMLElement
   );
 };
 

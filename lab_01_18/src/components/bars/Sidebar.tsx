@@ -1,9 +1,9 @@
 import "./Toolbar.css";
-import PointList from "../PointList.jsx";
-import { Button } from "../buttons/Button.jsx";
-import { TrashSVG } from "../svg/SVG.jsx";
-import LoadPointsFileButton from "../buttons/LoadFileButton.jsx";
-import DownloadFileButton from "../buttons/DownloadFileButton.jsx";
+import PointList from "../PointList.tsx";
+import { Button } from "../buttons/Button.tsx";
+import { TrashSVG } from "../svg/SVG.tsx";
+import LoadPointsFileButton from "../buttons/LoadFileButton.tsx";
+import DownloadFileButton from "../buttons/DownloadFileButton.tsx";
 import { DarkModeToggle } from "../buttons/DarkModeToggle";
 import { PointsHookResult } from "../../hooks/usePoint.js";
 import { ResultHook } from "../../hooks/useResult.js";
